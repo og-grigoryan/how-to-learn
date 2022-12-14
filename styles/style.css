@@ -43,7 +43,7 @@
 }
 
 .header__title {
-  width: 730px;
+  max-width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
@@ -55,12 +55,13 @@
 .header__subtitle {
   position: absolute;
   bottom: 30px;
-  width: 388px;
+  max-width: 388px;
   line-height: 25px;
   left:64px;
   font-size: 18px;
   font-weight:normal;
-  z-index: 2; 
+  z-index: 2;
+  margin: 0;
 }
 
 .header__main-illustrator{
@@ -77,7 +78,7 @@
   color:#2f80ed;
 }
 
-.description__two-columns {
+.two-columns {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -88,7 +89,7 @@
 .two-columns__brief {
   display: flex;
   color: #2f80ed;
-  width: 175px;
+  max-width: 175px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -104,14 +105,14 @@
   min-width:784px;
 }
 
-.main-text__paragraph {
+.two-columns__paragraph {
   margin: 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
 
-.main-text__span-accent {
+.two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
@@ -148,11 +149,11 @@
   width: 1100px;
   justify-content: space-around;
   margin: 0 auto 0;
+  row-gap: 60px;
 }
 
 .table__cell{
   width: 250px;
-  margin-bottom: 60px;
 }
 
 .table__heading{
@@ -174,17 +175,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   padding-top: 100px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .feynman__title {
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
-  width: 648px;
+  max-width: 648px;
   margin: 0;
   text-align: center;
   z-index: 1;
@@ -231,11 +233,14 @@
 }
 
 .kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
   margin: 0;
   width: 877px;
   height: 877px;
   right: -210px;
   position: absolute;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .section-title_theme_dark {
@@ -266,7 +271,8 @@
 }
 
 .footer {
-  min-height: 350px;
+  display: flex;
+  min-height: 250px;
   padding-top: 60px;
   padding-bottom: 40px;
   background-color: #1f1f1f;
@@ -277,7 +283,7 @@
   display: flex;
   justify-content:space-between;
   width: 90%;
-  margin: auto;
+  margin: 0 auto 0;
 }
 
 .footer__column_content_copyright {
