@@ -239,7 +239,7 @@
   height: 877px;
   right: -210px;
   position: absolute;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -260,6 +260,7 @@
 .table_theme_dark {
   margin-bottom: 90px;
   z-index: 1;
+  row-gap: 80px;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -267,7 +268,6 @@
   width: 200px;
   color: white;
   margin-right: 0;
-  margin-bottom: 80px;
 }
 
 .footer {
